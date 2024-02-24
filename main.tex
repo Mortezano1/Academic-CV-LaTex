@@ -1,0 +1,349 @@
+
+
+\documentclass[letter,20pt]{article}
+
+\usepackage{multicol}
+\usepackage{setspace} 
+\usepackage{graphicx}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex,hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\rfoot{\thepage\ of \pageref{LastPage}}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% My Packages
+
+% for footer
+%\usepackage{lastpage}
+%\newcommand*{\makecvfooter}[3]{%
+%	\fancyfoot{}
+%	\fancyfoot[L]{#1}
+%	\fancyfoot[C]{#2}
+%	\fancyfoot[R]{#3}
+%}
+
+\pagenumbering{gobble}
+\usepackage{lastpage}
+\pagestyle{fancy}
+\fancyhf{}
+\pagenumbering{arabic}
+\rfoot{\thepage/\pageref{LastPage}}
+\graphicspath{ {./figs/} }
+%for new line in one cell
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.530in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.45in}
+\addtolength{\textheight}{1in}
+
+\urlstyle{rm}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-0pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-8pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeItemWithoutTitle}[1]{
+  \item\small{
+    {\vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{#3} & \textit{#4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-3pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-----------------------------
+%%%%%%  CV STARTS HERE  %%%%%%
+
+\begin{document}
+%----------------------------------------------------------------------------------------
+%----------HEADING-----------------
+%----------------------------------------------------------------------------------------
+\begin{center}
+  \textit{\Large Curriculum Vitae}
+\end{center}
+
+\vspace{10pt} % Add vertical space
+
+\noindent
+\begin{minipage}[t]{0.45\textwidth}
+  \textbf{\large Morteza Kolivandi}\\[7.5pt]
+  \url{Morteza.kolivandi@sharif.edu}\\[7.5pt]
+  (+98) 9374216735
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.45\textwidth}
+  \raggedleft
+  \parbox{0.5cm}{\includegraphics[scale=0.015]{GS}}
+  \parbox{3cm}{\href{https://scholar.google.com/citations?user=FICYUZIAAAAJ&hl=en&authuser=1}{Google Scholar}}\par
+  \parbox{0.5cm}{\includegraphics[scale=0.028]{linkedin4}}
+  \parbox{3cm}{\href{https://www.linkedin.com/in/morteza-kolivandi-a50b94207/}{LinkedIn}}\par
+  \parbox{0.5cm}{\includegraphics[scale=0.011]{orcid}}
+  \parbox{3cm}{\href{https://orcid.org/0000-0003-2370-111X}{Orcid}}\\
+  \parbox{0.5cm}{\includegraphics[scale=0.24]{github-mark}}
+  \parbox{3cm}{\href{https://github.com/Mortezano1}{Github}}
+\end{minipage}
+%----------------------------------------------------------------------------------------
+%-----------EDUCATION-----------------
+%----------------------------------------------------------------------------------------
+\section{Education}
+\vspace{5pt}
+
+{\fontsize{10}{12}\selectfont % Set the desired font size and baseline skip
+\textbf{M.S.c in Energy System Engineering (Energy Technologies)}\hfill {\footnotesize Sep. 2020 - June. 2023}\\\vspace{5pt}
+\hspace{10pt}Sharif University of Technology, Tehran, Iran\hfill \hspace{10pt}\footnotesize \textbf{CGPA:} 17.62/20 (3.88/4.0)\vspace{3pt}\\
+\hspace{10pt}\indent{Thesis title:} Security Analysis and Reliability Evaluation of Energy Internet\\
+\hspace{10pt}\indent{Supervisor:} \hyperref[ref:prof1]{\textbf{Dr. Abbas Rajabi Ghahnavieh}}\\
+} 
+\vspace{10pt}
+
+{\fontsize{10}{12}\selectfont % Set the desired font size and baseline skip
+\textbf{B.Sc. in Physics}\hfill {\footnotesize Sep. 2014 - June. 2019}\\\vspace{5pt}
+\hspace{10pt}Arak University, Arak, Iran\hfill \hspace{10pt}\footnotesize \textbf{GPA (Last 3 Semesters):} 16.11/20.0\vspace{3pt}\\
+\hspace{10pt}\indent{Thesis title:} : Quantum Information and Quantum Computing: Basics and Challenges\\
+\hspace{10pt}\indent{Advisor:} \hyperref[ref:prof3]{\textbf{Dr. Amin Faraji Astaneh}}\\
+}
+%-----------Fields of Interest-----------------
+%-------------------------------------------------------------------
+
+\section{Fields of Interest}	    
+\vspace{5pt}
+
+\begin{itemize}[noitemsep, topsep=3pt, leftmargin=3ex]
+	\small \item Graph-based routing algorithms for power transmission in energy internet and smart grids \vspace{5pt}
+    \small \item Modeling uncertainties and stochastic optimization in energy applications \vspace{5pt}	
+	\small \item Reliability and risk assessment \vspace{5pt} 
+   \small \item Renewable energy resources integration
+    
+\end{itemize}
+
+%----------------------------------------------------------------------------------------
+
+\section{Publications}
+\vspace{5pt}
+\subsection*{Journal}
+     \begin{itemize}[noitemsep, topsep=3pt, leftmargin=3ex]
+    \small \item   Danook, Suad H., Vijayanandh Raja, \textbf{Morteza Kolivandi}, Ali Aghadadashi, and Mohammed Al-Bahrani. "Investigations of Performance Improvements on the Evacuated Tube Solar Collector with and Without the Incorporation of Preheater through Various Engineering Approaches." IET Renewable Power Generation 17 (2023)  \href{https://doi.org/10.1049/rpg2.12615}{\underline{doi.org/10.1049/rpg2.12615}}\vspace{5pt}
+\end{itemize}
+\subsection*{Conference}
+     \begin{itemize}[noitemsep, topsep=3pt, leftmargin=3ex]
+    \small\item\ \textbf{Morteza Kolivandi}, and Abbas Rajabi Ghahnavieh. "Numerical and Analytical Approaches to Assessing the Reliability of Routing Algorithm in Energy Internet." 7th International Conference on Reliability and Safety Engineering (\href{https://www.icrse2023.ir/files_site/files/paper/icrse7-01450120.pdf}{\underline{ICRSE 2023}}\vspace{5pt}) September 26, 2023\vspace{5pt}
+    \small\item\ \textbf{Morteza Kolivandi}, Masoud Kishani Farahani, and Abbas Rajabi Ghahnavieh. "Probabilistic Energy Routing Algorithm Enabling Reliability Assessment in Local Energy Internet."  9th International Conference on Technology and Energy Management (\href{https://www.icrse2023.ir/files_site/files/paper/icrse7-01450120.pdf}{\underline{ICTEM 2024}}\vspace{5pt}) February, 14, 2024\vspace{5pt}
+    \small\item\ Masoud Kishani Farahani, \textbf{Morteza Kolivandi}, and Abbas Rajabi Ghahnavieh. "Comparative Analysis of Energy Efficiency Evaluation Methods for Buildings: ISO 13790 vs. EnergyPlus Simulation."  9th International Conference on Technology and Energy Management (\href{https://www.icrse2023.ir/files_site/files/paper/icrse7-01450120.pdf}{\underline{ICTEM 2024}}\vspace{5pt}) February, 14, 2024\vspace{5pt}
+\end{itemize}
+
+%----------------------------------------------------------------------------------------
+%-----------Teaching Experiences -----------------
+%----------------------------------------------------------------------------------------
+\section{Teaching Experiences}	    
+\vspace{5pt}
+
+\begin{itemize}[noitemsep, topsep=6pt, after=\vspace{-0.5 mm},leftmargin = 0ex,rightmargin=1ex]
+	
+	\small \item[]  \textbf {Reliability and Risk Analysis} (spring semester 2023)\\
+    \indent\hspace{1cm}Department of Energy Engineering, Sharif University of Technology, Tehran, Iran \\
+    \indent\hspace{1cm}\parbox{17cm}{Conducting regular review sessions, assisting in the instruction and delivery of the course, and grading assignments, exams, and projects.}
+
+        {\noindent\hspace{1cm}{\textbf{Lecturer:} \hyperref[ref:prof1]{Dr. Abbas Rajabi            Ghahnavieh}}}\\\vspace{5pt}
+
+    \small \item[]  \textbf {Process Engineering} (fall semester 2022)\\
+    \indent\hspace{1cm}Department of Energy Engineering, Sharif University of Technology, Tehran, Iran \\
+    \indent\hspace{1cm}\parbox{17cm}{Teaching mass balance and Thermodynamics, revising homework and project reports, and working as a group project advisor.}
+
+        {\noindent\hspace{1cm}{\textbf{Lecturer:} \hyperref[ref:prof2]{Dr. Akram Avami}}}\\\vspace{5pt}
+
+    \small \item[]  \textbf {Energy Management in Building} (fall semester 2022)\\
+    \indent\hspace{1cm}Department of Energy Engineering, Sharif University of Technology, Tehran, Iran \\
+    \indent\hspace{1cm}\parbox{17cm}{ Preparing and conducting weekly tutorials for classes, and homework and project reports revision.}
+
+        {\noindent\hspace{1cm}{\textbf{Lecturer:} \hyperref[ref:prof1]{Dr. Abbas Rajabi            Ghahnavieh}}}\\\vspace{5pt}
+\end{itemize}
+
+
+%----------------------------------------------------------------------------------------
+%-----------Projects-----------------
+%----------------------------------------------------------------------------------------
+\section{Selected Projects}	    
+\vspace{5pt}
+
+\begin{itemize}[noitemsep, topsep=6pt, after=\vspace{-0.5 mm},leftmargin = 0ex,rightmargin=1ex]
+	\small \item[]  \textbf {Investigation of Reliability Evaluation in the Energy Internet and Proposal of Applicable Index: A Case Study IEEE 9 Bus Network}\vspace{3pt}\\
+	{\footnotesize \textbf{Course:} Reliability and Risk Analysis}\vspace{10pt}\hfill {\footnotesize June. 2022}\\
+	
+	% Experimental Project #3
+	\small \item[]  \textbf {Utilizing Supercritical CO2 Cycle and Compression Refrigeration for Energy Recovery from Municipal 
+Waste Incineration: Electricity, Heat, and Cooling Generation}\vspace{3pt}\\
+	{\footnotesize \textbf{Course:} Process Engineering }\vspace{10pt}\hfill {\footnotesize Feb. 2022}\\
+		
+% Experimental Project #3
+	\small \item[]  \textbf {Stochastic Optimization in Multi-Carrier Energy Hub Considering Electrical Energy Storage Degradation}\vspace{3pt}\\
+	{\footnotesize \textbf{Course:} Applied Optimization in Energy System (\href{https://github.com/Mortezano1/Battery-degradation-in-Energy-Hub}{\underline{github}}\vspace{5pt})}\vspace{10pt}\hfill {\footnotesize Feb. 2022}\\
+
+ % Experimental Project #3
+	\small \item[]  \textbf {Mathematical Modeling of Semi-Transparent Photovoltaic Panels and Investigation of Integrated Systems in the Greenhouse and Building Applications}\vspace{3pt}\\
+	{\footnotesize \textbf{Course:} Advanced Energy Conversion}\vspace{10pt}\hfill {\footnotesize June. 2021}\\
+
+ % Experimental Project #3
+	\small \item[]  \textbf {Optimization in Net-Zero Energy Buildings Using Multi-Objective Mixed-Integer Linear Programming}\vspace{3pt}\\
+	{\footnotesize \textbf{Course:} Energy Modeling (\href{https://github.com/Mortezano1/Smart-Buliding-Modeling}{\underline{github}}\vspace{5pt})}\vspace{10pt}\hfill {\footnotesize June. 2021}\\
+
+ 
+	% Experimental Project #4
+	\item[]  \textbf {Academic Research Project}
+	
+	\begin{itemize}[noitemsep, topsep=3pt, after=\vspace{-5 mm},leftmargin = 4ex]
+		\item[$\diamond$]{\footnotesize The Prediction of Average Rainfall and Average Temperature for Iran Using Machine Learning.(\href{https://github.com/Mortezano1/The-prediction-of-average-rainfall-and-average-temperature-for-Iran-using-machine-learning}{\underline{github}}\vspace{5pt})}
+        \item[$\diamond$]{\footnotesize Fault Detection of Supermarket Refrigeration Systems Using Machine Learning.}
+        \item[$\diamond$]{\footnotesize Scenario Generation and Reduction for Stochastic Optimization Using Monte Carlo Simulation: Forward and Backward Method.(\href{https://github.com/Mortezano1/Monte-carlo-simulation-and-scenario-reduction-Forward-}{\underline{github}}\vspace{5pt})}
+        \item[$\diamond$]{\footnotesize Development of a linear programming code - Revised simplex method- in MATLAB
+.(\href{https://github.com/Mortezano1/Revised-simplex}{\underline{github}}\vspace{5pt})}
+	\end{itemize}\vspace{10pt}
+	
+\end{itemize}
+%----------------------------------------------------------------------------------------
+%-----------Selected Courses-----------------
+%----------------------------------------------------------------------------------------
+\section{Selected Courses}	    
+\vspace{5pt}
+\subsection*{Graduate}
+\begin{itemize}[leftmargin=6ex]
+    \item  Reliability and Risk Analysis (19.8/20) 
+    \item  Energy Management in Building (19/20)
+    \item  Applied Optimization in Energy System (18.6/20)
+    \item  Process Engineering (18.3/20) 
+    \item  Energy Modeling (18.2/20) 
+\end{itemize}
+
+\subsection*{Udergraduate}
+\begin{itemize}[leftmargin=6ex]
+    \item  Astrophysics (19.25/20)
+    \item  Fundamental Particles (19.5/20)
+    \item  Plasma (18/20)
+    \item  Renewable Energy (16/20)
+    \item  Mathematical Physics 1 and 2 (17.4 and 18/20)
+    \item  Geophysics (18.75/20)
+    \item  Thermodynamics and Statistical Mechanics (17.75/20)
+\end{itemize}
+
+%----------------------------------------------------------------------------------------
+%-----------Languages Skills-----------------
+%----------------------------------------------------------------------------------------
+\section{Language Skills}	    
+\vspace{5pt}
+
+\begin{itemize}[leftmargin=3ex]
+	\item   {{English:}} Fluent (TOEFL iBT, Overall Score: -),\\ 
+	\hspace*{10pt}	R: -, L: -, S: -, and W: -\\
+    \item  Persian: Native   
+\end{itemize}
+%----------------------------------------------------------------------------------------
+%-----------Honor And Awards-----------------
+%----------------------------------------------------------------------------------------
+\section{Honors and Awards}	    
+\vspace{5pt}
+
+\begin{itemize}[noitemsep, topsep=6pt, after=\vspace{-5 mm}, leftmargin = 3ex]
+	\item \small Best poster award in 9th International Conference on Technology and Energy Management; Feb 2024. \vspace{5pt}
+    \item \small Ranked 68th (top 1.7\%) among more than 4000 participants in the Iranian University Entrance Exam for master degree. \vspace{5pt}
+    \item \small Ranked 17th (top 1.1\%) among more than 1500 participants in the Photonics Entrance Exam for master degree. \vspace{5pt}
+    
+	
+\end{itemize}
+\vspace{0pt}
+
+%----------------------------------------------------------------------------------------
+%-----------Skills-----------------
+%----------------------------------------------------------------------------------------
+\section{Skills and Experties}	    
+\vspace{5pt}
+    \begin{itemize}[noitemsep, topsep=6pt, after=\vspace{-5 mm}, leftmargin = 3ex]
+        \item \small \textbf{Technical Software}: GAMS, Aspen Hysys, MATLAB, PVsyst, EnergyPlus\vspace{5pt}
+        \item \small \textbf{Programming Languages}: Python (Tensorflow, sklearn,  Pyomo, Numpy, Pandas,  Matplotlib, Seaborn, ...), Fortran\vspace{5pt}
+	    \item \small \textbf{General Software}: \LaTeX, Microsoft Office Suite \vspace{5pt}
+     
+\end{itemize}
+\vspace{0pt}
+
+%----------------------------------------------------------------------------------------
+%-----------Hobbies-----------------
+%----------------------------------------------------------------------------------------
+\section{Hobbies and Interests}	    
+\vspace{5pt}
+    \begin{itemize}[noitemsep, topsep=6pt, after=\vspace{-5 mm}, leftmargin = 3ex]
+        \item \small Playing Setar (Classical Persian instrument)\vspace{5pt}
+        \item \small Sports: Football, Running\vspace{5pt}
+	    \item \small Books: Poetry, Sci-fi, and Philosophy \vspace{5pt}
+     
+\end{itemize}
+\vspace{0pt}
+%----------------------------------------------------------------------------------------
+%-----------References-----------------
+%----------------------------------------------------------------------------------------
+
+\section{References}	    
+\vspace{5pt}
+
+\begin{itemize}[leftmargin=3ex]
+	\item \label{ref:prof1}\textbf{Abbas Rajabi Ghahnavieh}\vspace{2pt}\\
+	Assistant Professor,\\
+	Department of Energy Engineering, Sharif University of Technology\\
+	Email: Rajabi@sharif.edu\vspace{5pt}
+\end{itemize} 
+
+\begin{itemize}[leftmargin=3ex]
+	\item \label{ref:prof2}\textbf{Akram Avami}\vspace{2pt}\\
+	Associate Professor,\\
+	Department of Energy Engineering, Sharif University of Technology\\
+	Email: Avami@sharif.edu\vspace{5pt}
+\end{itemize}
+
+\begin{itemize}[leftmargin=3ex]
+	\item \label{ref:prof3}\textbf{Amin Faraji Astaneh}\vspace{2pt}\\
+	Assistant Professor,\\
+	Department of Physics, Sharif University of Technology\\
+	Email: Faraji@sharif.edu\\
+\end{itemize}
+
+\vspace{5pt}
+
+\end{document}
