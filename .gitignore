@@ -1,0 +1,84 @@
+# Output files
+*.pdf
+*.dvi
+*.ps
+
+# LaTeX auxiliary files
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.synctex(busy)
+*.synctex.gz(busy)
+
+# Bibliography
+*.bbl
+*.blg
+*.bcf
+*.run.xml
+
+# Index files
+*.idx
+*.ilg
+*.ind
+
+# Glossaries
+*.acn
+*.acr
+*.alg
+*.glg
+*.glo
+*.gls
+*.glsdefs
+
+# Nomenclature
+*.nlo
+*.nls
+
+# Lists
+*.lol
+
+# Beamer
+*.nav
+*.snm
+
+# Minted
+_minted*
+*.pyg
+
+# TikZ externalization
+*.tikz
+*.dpth
+*.md5
+
+# latexmk
+*.latexmk
+
+# Temporary files
+*.tmp
+*.bak
+*.backup
+*.swp
+*.swo
+*~
+
+# Build directories
+build/
+out/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# VS Code (optional)
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
