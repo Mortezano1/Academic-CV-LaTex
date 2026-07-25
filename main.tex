@@ -1,7 +1,7 @@
 \documentclass[letter,20pt]{article}
 
 \usepackage{multicol}
-\usepackage{setspace} 
+\usepackage{setspace}
 \usepackage{graphicx}
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
@@ -10,37 +10,23 @@
 \usepackage[usenames,dvipsnames]{color}
 \usepackage{verbatim}
 \usepackage{enumitem}
+\usepackage{tabularx}
 \usepackage[pdftex,hidelinks]{hyperref}
 \usepackage{fancyhdr}
 \usepackage[normalem]{ulem}
 \usepackage{ragged2e}
-\rfoot{\thepage\ of \pageref{LastPage}}
+\usepackage{lastpage}
+
+\rfoot{\thepage/\pageref{LastPage}}
 
 \pagestyle{fancy}
-\fancyhf{} % clear all header and footer fields
+\fancyhf{}
 \fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
-% My Packages
-
-% for footer
-%\usepackage{lastpage}
-%\newcommand*{\makecvfooter}[3]{%
-%	\fancyfoot{}
-%	\fancyfoot[L]{#1}
-%	\fancyfoot[C]{#2}
-%	\fancyfoot[R]{#3}
-%}
-
-\pagenumbering{gobble}
-\usepackage{lastpage}
-\pagestyle{fancy}
-\fancyhf{}
 \pagenumbering{arabic}
-\rfoot{\thepage/\pageref{LastPage}}
-\graphicspath{ {./figs/} }
-%for new line in one cell
+\graphicspath{{./figs/}}
 
 % Adjust margins
 \addtolength{\oddsidemargin}{-0.530in}
@@ -55,12 +41,13 @@
 \raggedright
 \setlength{\tabcolsep}{0in}
 
+
 % Sections formatting
 \titleformat{\section}{
   \vspace{-0pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-8pt}]
 
-%-------------------------
+
 % Custom commands
 \newcommand{\resumeItem}[2]{
   \item\small{
@@ -68,334 +55,1300 @@
   }
 }
 
-\newcommand{\resumeItemWithoutTitle}[1]{
-  \item\small{
-    {\vspace{-2pt}}
-  }
+\newcommand{\resumeSubItem}[2]{
+    \resumeItem{#1}{#2}\vspace{-3pt}
 }
 
-\newcommand{\resumeSubheading}[4]{
-  \vspace{-1pt}\item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \textit{#3} & \textit{#4} \\
-    \end{tabular*}\vspace{-5pt}
+\newcommand{\resumeSubHeadingListStart}{
+\begin{itemize}[leftmargin=*]
 }
 
+\newcommand{\resumeSubHeadingListEnd}{
+\end{itemize}
+}
 
-\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-3pt}}
+\newcommand{\resumeItemListStart}{
+\begin{itemize}
+}
 
-\renewcommand{\labelitemii}{$\circ$}
+\newcommand{\resumeItemListEnd}{
+\end{itemize}\vspace{-5pt}
+}
 
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
 %-----------------------------
-%%%%%%  CV STARTS HERE  %%%%%%
+%%%%%% CV STARTS HERE %%%%%%
+%-----------------------------
 
 \begin{document}
+
+
 %----------------------------------------------------------------------------------------
-%----------HEADING-----------------
+% HEADER
 %----------------------------------------------------------------------------------------
+
 \begin{center}
-    {\LARGE \textbf{Morteza Kolivandi}} \\
-    17 Shahrivar St, Tehran, Iran \\
-    (+98) 937-4216735 \ \textbar \ \href{mailto:Morteza.kolivandi@sharif.edu}{morteza.kolivandi@sharif.edu}
- 
 
-    % Social links
-    \parbox{0.5cm}{\includegraphics[scale=0.015]{GS}}
-    \parbox{3cm}{\href{https://scholar.google.com/citations?user=FICYUZIAAAAJ&hl=en&authuser=1}{Google Scholar}} 
-    \textbar \ \parbox{0.5cm}{\includegraphics[scale=0.028]{linkedin4}}
-    \parbox{3cm}{\href{https://www.linkedin.com/in/morteza-kolivandi-a50b94207/}{LinkedIn}}
-    \textbar \ \parbox{0.5cm}{\includegraphics[scale=0.011]{orcid}}
-    \parbox{3cm}{\href{https://orcid.org/0000-0003-2370-111X}{ORCID}}
-    \textbar \ \parbox{0.5cm}{\includegraphics[scale=0.24]{github-mark}}
-    \parbox{3cm}{\href{https://github.com/Mortezano1}{GitHub}}
+{\LARGE \textbf{Morteza Kolivandi}}\\[5pt]
+
+Energy Engineer | AI Researcher\\
+
+Tehran, Iran\\
+
+(+98) 937-4216735
+\quad | \quad
+\href{mailto:Morteza.kolivandi@sharif.edu}
+{Morteza.kolivandi@sharif.edu}
+
+\vspace{5pt}
+
+\href{https://scholar.google.com/citations?user=FICYUZIAAAAJ}
+{Google Scholar}
+\quad | \quad
+
+\href{https://www.linkedin.com/in/morteza-kolivandi-a50b94207/}
+{LinkedIn}
+\quad | \quad
+
+\href{https://github.com/Mortezano1}
+{GitHub}
+\quad | \quad
+
+\href{https://orcid.org/0000-0003-2370-111X}
+{ORCID}
+
 \end{center}
+
+
+
 %----------------------------------------------------------------------------------------
-%-----------Personal Profile-----------------
+% RESEARCH STATEMENT
 %----------------------------------------------------------------------------------------
-\section*{\textbf{Personal Profile}}
+
+\section{\textbf{Research Statement}}
+
 \vspace{5pt}
+
 \begin{justify}
-    \begin{itemize}[noitemsep, topsep=6pt, after=\vspace{-0.6 mm},leftmargin = 3ex,rightmargin=1ex]
-        \item Analytical and motivated researcher with a solid academic background in energy systems, stochastic optimization, and machine learning.
-        \item Experienced in publishing research papers and presenting at international conferences.
-        \item Strong programming skills with a proven track record in developing and implementing algorithms for uncertainty modeling and decision-making in energy systems.
-        % \item Analytical researcher with a solid academic background, experienced in publishing research papers and presenting at international conferences.
-        \item Responsible and disciplined individual who meets deadlines while delivering accurate results in fast-paced environments.
-        % \item Adaptable and resilient team player with strong communication skills and a clear understanding of project needs.
-        % \item Creative problem-solver skilled at developing innovative solutions and adapting to project changes.
-    \end{itemize}
-\end{justify}
-%----------------------------------------------------------------------------------------
-%-----------EDUCATION-----------------
-%----------------------------------------------------------------------------------------
-\section{\textbf{Education}}
-\vspace{5pt}
 
-{\fontsize{9}{12}\selectfont % Set the desired font size and baseline skip
+\begin{itemize}
+[
+noitemsep,
+topsep=5pt,
+leftmargin=3ex,
+rightmargin=1ex
+]
 
-%-------------Master-----------------------
-\ M.Sc. in Energy System Engineering (Energy Technologies)\hfill {\footnotesize Sep 2020 - Jun 2023}\\\vspace{5pt}
-\hspace{10pt}Sharif University of Technology, Tehran, Iran (ranked \#1 university in Iran)\hfill \hspace{10pt}\footnotesize \textbf{CGPA:} 17.62/20 (3.88/4.0)\vspace{3pt}\\
-\fontsize{9}{12}\selectfont\hspace{10pt}\indent{Thesis:} \textit{Security Analysis and Reliability Evaluation of Energy Internet}\\
-\fontsize{9}{12}\selectfont
-\hangindent=24pt \hspace{24pt}Summary: Analyzed the security and reliability of Energy Internet networks integrating renewable energy and smart grids. Developed a probabilistic routing algorithm to optimize power flow and mitigate failures. Utilized Monte Carlo simulations and genetic algorithms to enhance system resilience and efficiency (\uline{resulting in an underprint journal article and a conference paper published by IEEE, with 2 citations to date}).\\
-\hspace{10pt}\indent{Supervisor:} Dr. Abbas Rajabi Ghahnavieh}\\
-\vspace{10pt}
-%----------------Bachelor-----------
-{\fontsize{9}{12}\selectfont % Set the desired font size and baseline skip
-B.Sc. in Physics\hfill {\footnotesize Sep 2015 - Feb 2020}\\\vspace{5pt}
-\hspace{10pt}Arak University, Arak, Iran\hfill \hspace{10pt}\footnotesize \textbf{GPA (Last 3 Semesters):} 16.11/20\vspace{3pt}\\
-\fontsize{9}{12}\selectfont\hspace{10pt}\indent{Thesis:} \textit{Quantum Computing and Quantum Information: Basics and Challenges}\\
-\fontsize{9}{12}\selectfont\hspace{10pt}\indent{Advisor:} Dr. Amin Faraji Astaneh}\\
+\item
+Energy systems engineer with expertise in developing data-driven and physics-informed solutions for renewable energy systems, smart grids, and intelligent energy infrastructures. My research combines stochastic optimization, machine learning, graph-based modeling, and advanced computational methods to improve the reliability, resilience, and operational efficiency of integrated energy systems.
 
-%-----------Fields of Interest-----------------
-%-------------------------------------------------------------------
-\section{\textbf{Fields of Interest}}	    
-\vspace{5pt}
-\begin{itemize}[noitemsep, topsep=3pt, leftmargin=3ex]
-    % \small \item Algorithmic trading and decision-making under uncertainty \vspace{3pt}
-    % \small \item Energy system modeling and generation expansion planning \vspace{3pt}
-    % \small \item Stochastic optimization and machine learning \vspace{3pt}
-    % \small \item Renewable energy integration, especially wind energy \vspace{3pt}
-    % \small \item Energy market modeling and analytics \vspace{3pt}
-    \small \item Solar energy and building-integrated photovoltaics (BIPV/BIPV-T) \vspace {3pt}
-    \small \item Net-zero smart buildings \vspace{3pt}
-    \small \item Resilient grid integration with RES and storage \vspace{5pt}
-    \small \item Predictive modeling, analytics, and machine learning \vspace {3pt}
-    % \small \item Graph-based algorithms \vspace{5pt}
-	% \small \item Reliability and risk assessment \vspace{3pt}
-    % \small \item Application: Energy and power systems
-    
-    
+\item
+My recent work focuses on artificial intelligence applications in energy systems, including renewable generation forecasting, predictive maintenance, fault detection, and real-time energy analytics. I have hands-on experience designing industrial-scale monitoring platforms using SCADA data pipelines, time-series databases, and machine learning models for photovoltaic power plants.
+
+\item
+I aim to pursue doctoral research focused on intelligent energy systems, digital twins, AI-driven optimization, and resilient renewable energy infrastructures by integrating domain knowledge with advanced computational approaches.
+
 \end{itemize}
-% ----------------------------------------------------------------------------------------
-% -----------------------------------Publications---------------------------------------------
-% ----------------------------------------------------------------------------------------
+
+\end{justify}
+
+
+
+%----------------------------------------------------------------------------------------
+% RESEARCH INTERESTS
+%----------------------------------------------------------------------------------------
+
+\section{\textbf{Research Interests}}
+
+\vspace{5pt}
+
+\begin{itemize}
+[
+noitemsep,
+topsep=5pt,
+leftmargin=3ex
+]
+
+\item Artificial Intelligence for Energy Systems and Renewable Integration
+
+\item Smart Grids, Energy Internet, and Distributed Energy Resources
+
+\item Stochastic Optimization and Reliability Assessment of Energy Networks
+
+\item Machine Learning for Fault Detection and Predictive Maintenance
+
+\item Renewable Energy Forecasting and Intelligent Control
+
+\item Digital Twins and Data-driven Energy Analytics
+
+\item Energy Storage Optimization and Multi-energy Systems
+
+\end{itemize}
+
+
+
+%----------------------------------------------------------------------------------------
+% EDUCATION
+%----------------------------------------------------------------------------------------
+
+\section{\textbf{Education}}
+
+\vspace{5pt}
+
+
+%------------ MASTER -------------
+
+\textbf{M.Sc. in Energy System Engineering}
+\hfill
+{\footnotesize Sep 2020 -- Jun 2023}
+
+\vspace{4pt}
+
+\hspace{10pt}
+Sharif University of Technology, Tehran, Iran
+
+\hfill
+
+\textbf{CGPA:}
+17.62/20 (3.88/4.0)
+
+
+\vspace{4pt}
+
+\hspace{10pt}
+\textbf{Full Scholarship}
+awarded based on top 1\% ranking in the Iranian National University Entrance Examination
+
+
+\vspace{4pt}
+
+
+\hspace{10pt}
+\textbf{Thesis:}
+
+\textit{
+Security Analysis and Reliability Evaluation of Energy Internet
+}
+
+
+\begin{itemize}
+[
+noitemsep,
+topsep=3pt,
+leftmargin=8ex
+]
+
+\item
+Developed a probabilistic energy routing framework using graph theory and Monte Carlo simulation to improve reliability and resilience of local Energy Internet networks.
+
+\item
+Modeled uncertainty in electricity demand, distributed energy resources, and component failures using probabilistic approaches.
+
+\item
+Evaluated system reliability using reliability indices including Expected Energy Not Supplied (EENS) and Risk Reduction Worth (RRW).
+
+\item
+Validated the proposed framework on distribution network test systems and published the outcomes in peer-reviewed conferences.
+
+\end{itemize}
+
+
+\hspace{10pt}
+\textbf{Supervisor:}
+Dr. Abbas Rajabi Ghahnavieh
+
+
+
+\vspace{12pt}
+
+
+%------------ BACHELOR -------------
+
+\textbf{B.Sc. in Physics}
+
+\hfill
+{\footnotesize Sep 2015 -- Feb 2020}
+\\[4pt]
+
+
+\hspace{10pt}
+Arak University, Arak, Iran
+
+\hfill
+
+\textbf{GPA (Last 3 Semesters):}
+16.11/20
+
+
+\vspace{4pt}
+
+
+\hspace{10pt}
+\textbf{Thesis:}
+
+\textit{
+Quantum Computing and Quantum Information: Basics and Challenges
+}
+
+
+\vspace{4pt}
+
+\hspace{10pt}
+\textbf{Advisor:}
+Dr. Amin Faraji Astaneh
+
+
+%----------------------------------------------------------------------------------------
+% PUBLICATIONS
+%----------------------------------------------------------------------------------------
 
 \section{\textbf{Publications}}
-\vspace{5pt}
-\subsection*{\fontsize{10pt}{12pt}\selectfont Journal}
-\begin{itemize}[noitemsep, topsep=6pt, after=\vspace{-0.5 mm},leftmargin = 3ex,rightmargin=1ex]
-    \small \item \justifying  Danook, Suad H., Vijayanandh Raja, \textbf{Morteza Kolivandi}, Ali Aghadadashi, and Mohammed Al-Bahrani. "\textit{Investigations of Performance Improvements on the Evacuated Tube Solar Collector with and Without the Incorporation of Preheater through Various Engineering Approaches.}" IET Renewable Power Generation (2023). \href{https://doi.org/10.1049/rpg2.12615}{\underline{doi.org/10.1049/rpg2.12615}}\vspace{5pt}
-    \small \item \justifying  Masoud Kishani Farahani, \textbf{Morteza Kolivandi}, Abbas Rajabi Ghahnavieh, and Mohammad Talaei. "\textit{Enhancing Fault Detection in CO2 Refrigeration Systems: Optimal Sensor Selection and Robustness Analysis Using Tree-Based Machine Learning.}" (arXiv preprint 2025). \href{https://doi.org/10.48550/arXiv.2503.17694}{\underline{doi.org/10.48550/arXiv.2503.17694}}\vspace{5pt}
-    \small \item \justifying  \textbf{Morteza Kolivandi}, Abbas Rajabi Ghahnavieh. "\textit{Enhancing Energy Internet Efficiency: Probabilistic Energy Routing and Reliability Assessment Using Graph Theory.”}" (underprint). 
-\end{itemize}
-\subsection*{\fontsize{10pt}{12pt}\selectfont Coonference}
-    \begin{itemize}[noitemsep, topsep=3pt, leftmargin=3ex]
-    \small\item\justifying \textbf{Morteza Kolivandi}, Masoud Kishani Farahani, and Abbas Rajabi Ghahnavieh. "\textit{Probabilistic Energy Routing Algorithm Enabling Reliability Assessment in Local Energy Internet.}"  9th International Conference on Technology and Energy Management. February, 14, 2024. \href{http://dx.doi.org/10.1109/ICTEM60690.2024.10631934}{\underline{doi.org/10.1109/ICTEM60690.2024.10631934}}\vspace{5pt}
-    \small\item\ Masoud Kishani Farahani, \textbf{Morteza Kolivandi}, and Abbas Rajabi Ghahnavieh. "\textit{Comparative Analysis of Energy Efficiency Evaluation Methods for Buildings: ISO 13790 vs. EnergyPlus Simulation.}"  9th International Conference on Technology and Energy Management. February, 14, 2024. \href{http://dx.doi.org/10.1109/ICTEM60690.2024.10631972}{\underline{doi.org/10.1109/ICTEM60690.2024.10631972}}\vspace{5pt}
-    \small\item\ \textbf{Morteza Kolivandi}, and Abbas Rajabi Ghahnavieh. "\textit{Numerical and Analytical Approaches to Assessing the Reliability of Routing Algorithm in Energy Internet.}" 7th International Conference on Reliability and Safety Engineering (\href{https://www.icrse2023.ir/files_site/files/paper/icrse7-01450120.pdf}{\underline{ICRSE 2023}}\vspace{5pt}) September 26, 2023.\vspace{5pt}
-\end{itemize}
-
-%----------------------------------------------------------------------------------------
-%-----------Projects-----------------
-%----------------------------------------------------------------------------------------
-\section{\textbf{Selected Projects}}    
-\vspace{5pt}
-
-% -----------------% Research Projects	------------------
-
-\subsection*{\fontsize{10pt}{12pt}\selectfont Research Projects}	
-	\begin{itemize}[noitemsep, topsep=6pt, after=\vspace{-0.5 mm},leftmargin = 0ex,rightmargin=1ex]
-		\small\item[]{ The Prediction of Average Rainfall and Average Temperature for Iran Using Machine Learning. (\href{https://github.com/Mortezano1/The-prediction-of-average-rainfall-and-average-temperature-for-Iran-using-machine-learning}{\underline{github}}\vspace{3pt})}
-        \small\item[]{ Fault Detection of Supermarket Refrigeration Systems Using Machine Learning.}\vspace{3pt}
-        \small\item[]{ Scenario Generation and Reduction for Stochastic Optimization Using MC Simulation: Forward and Backward Method. (\href{https://github.com/Mortezano1/Monte-carlo-simulation-and-scenario-reduction-Forward-}{\underline{github}}\vspace{3pt})}
-        % \small\item[]{ Development of a Linear Programming Solver - Revised Simplex Method- in MATLAB.(\href{https://github.com/Mortezano1/Revised-simplex}{\underline{github}}\vspace{2pt})}
-	\end{itemize}
-
-% -----------------% Academic Projects	------------------
-
-\subsection*{\fontsize{10pt}{12pt}\selectfont Academic Projects}
-\begin{itemize}[noitemsep, topsep=6pt,leftmargin = 0ex,rightmargin=1ex]	
-% Experimental Project #1    
-    \small \item[]\justifying  Investigation of Reliability/Risk Evaluation in the Energy Internet and Proposal of Applicable Index: A Case Study IEEE 9 Bus Network \vspace{5pt}\hfill {\footnotesize Jun 2022}
-	% (Course: Reliability and Risk Analysis \textbar\ Grade: 19.8/20)
-% Experimental Project #2    
-    % \small \item[]\justifying  Utilizing Supercritical CO2 Cycle and Compression Refrigeration for Energy Recovery from Municipal Waste Incineration: Electricity, Heat, and Cooling Generation \vspace{5pt}\hfill {\footnotesize Feb 2022}
-    % (Course: Process Engineering \textbar\ Grade: 18.3/20)
-% Experimental Project #3    
-    \small \item[]\justifying  Stochastic Optimization in Multi-Carrier Energy Hub Considering Electrical Energy Storage Degradation \vspace{5pt}\hfill {\footnotesize Feb 2022}
-    % (Course: Applied Optimization in Energy System \textbar\ Grade: 18.6/20)
-% Experimental Project #4    
-    \small \item[]\justifying  Mathematical Modeling of Semi-Transparent Photovoltaic Panels and Investigation of Integrated Systems in the Greenhouse and Building Applications \vspace{5pt}\hfill {\footnotesize Jun 2021}
-    % (Course: Advanced Energy Conversion \textbar\ Grade: 16.5/20)
-% Experimental Project #5    
-    \small \item[]\justifying  Optimization in Net-Zero Energy Buildings Using Multi-Objective Mixed-Integer Linear Programming \vspace{5pt}\hfill {\footnotesize Jun 2021}
-    % (Course: Energy Modeling \textbar\ Grade: 18.2/20)
-% Experimental Project #6    
-    % \small \item[]\justifying  Monthly Heating Load Calculation with EnergyPlus and ISO 13790 for Department of Energy Engineering \hfill {\footnotesize Jun 2021}
-    % (Course: Energy Management in Building \textbar\ Grade: 19/20)
-\end{itemize}
-
-
-
-    
-%----------------------------------------------------------------------------------------
-%-----------Skills-----------------
-%----------------------------------------------------------------------------------------
-\section{\textbf{Skills and Expertise}}	    
-\vspace{5pt}
-    \begin{itemize}[noitemsep, topsep=6pt, after=\vspace{-5 mm}, leftmargin = 3ex]
-        % \item \small \textbf{Programming \& Tools}: Python (TensorFlow, scikit-learn, Pyomo, NumPy, Pandas, PyTorch), MATLAB, R, GAMS, Fortran \vspace{5pt}
-        % \item \small \textbf{Optimization \& Algorithms}: Stochastic optimization, linear \& nonlinear programming, dynamic programming, evolutionary algorithms, statistical learning \vspace{5pt}
-        % \item \small \textbf{Energy Systems \& Technologies}: Renewable energy, smart grids, energy storage, fault detection, energy-efficient buildings \vspace{5pt}
-        % \item \small \textbf{Simulation Tools}: EnergyPlus, DesignBuilder, PVsyst, EES  \vspace{5pt}
-        \item \small \textbf{Programming}: Python (Pyomo, TensorFlow, Pandas, Numpy, PyTorch, scikit-learn), MATLAB, R, Fortran \vspace {5pt}
-        \item \small \textbf{Modeling \& Tools}: GAMS, EnergyPlus, PVsyst, DesignBuilder, EES, Hint \vspace {5pt}
-        % \item \small \textbf{Expertise}: Energy system modeling, stochastic optimization, scenario analysis, renewable integration, reliability and risk assessment, generation expansion planning \vspace {5pt}
-        % \item \small \textbf{Technologies}: Smart grids, microgrids, wind turbines, PVs, fault detection \vspace {5pt}
-     %    \item \small \textbf{Tools}: GAMS, EnergyPlus, DesignBuilder, PVsyst, EES, Hint \vspace{5pt}
-	    \item \small \textbf{Technologies}: Green buildings, Renewable energy systems, EVs, Micro/smart grids, Energy storage systems, Fault detection and diagnosis, Stochastic optimization \vspace{5pt}
-        \item \small \textbf{Standards}: ASHRAE 90.1-189.1, ISO 13790, LEED, BREEAM  \vspace{5pt}
-\end{itemize}
-\vspace{0pt}
-
-%----------------------------------------------------------------------------------------
-%-----------Work experience-----------------
-%----------------------------------------------------------------------------------------
-\section{\textbf{Work Experience}}    
-\vspace{5pt}
-\begin{itemize}[noitemsep, topsep=6pt,leftmargin = 0ex,rightmargin=1ex]
-	
-% Experimental Project #1    
-    \small \item[]\textbf{Research Fellow}\hfill {\footnotesize Jan 2025 - Present}\\\vspace{3pt}
-    \small \item[] Sharif Energy, Water and Environment Institute (SEWEI)\\\vspace{3pt}
-    \small \item[]\justifying Project: Developing an Executive Plan to Transform the Sharif Energy, Water and Environment Institute Building into a Green Building Using BREEAM-in-use/LEED Guidance.	\vspace{6pt}
-    \small \item[]\textbf{Executive Member}\hfill {\footnotesize Mar 2024}\vspace{3pt}
-    \small \item[] International Conference on Energy Resilience and Sustainability (ICERS2024)
-\end{itemize}
-%----------------------------------------------------------------------------------------
-%-----------Teaching Experiences -----------------
-%----------------------------------------------------------------------------------------
-\section{\textbf{Teaching Experiences}} 	    
-\vspace{5pt}
-
-\begin{itemize}[noitemsep, topsep=6pt, after=\vspace{-0.5 mm},leftmargin = 0ex,rightmargin=1ex]
-	
-	\small \item[]  \textbf {Reliability and Risk Analysis} (spring semester 2023)\\
-    \small \item[] Department of Energy Engineering, Sharif University of Technology, Tehran, Iran \\
-    \small \item[] \justifying Conducting regular review sessions, assisting in the instruction and delivery of the course, and grading assignments, exams, and projects.\vspace{6pt}
-
-        %{\noindent\hspace{1cm}{\textbf{Lecturer:} Dr. Abbas Rajabi            Ghahnavieh}}\\\vspace{5pt}
-
-    \small \item[]  \textbf {Process Engineering} (fall semester 2022)\\
-    Department of Energy Engineering, Sharif University of Technology, Tehran, Iran \\
-    \justifying Teaching mass balance thermodynamics, revising homework and project reports, and working as a group project advisor.\vspace{6pt}
-
-        %{\noindent\hspace{1cm}{\textbf{Lecturer:} Dr. Akram Avami}}\\\vspace{5pt}
-
-    \small \item[]  \textbf {Energy Management in Building} (fall semester 2022)\\
-    Department of Energy Engineering, Sharif University of Technology, Tehran, Iran \\
-    \justifying Preparing and conducting weekly tutorials for classes, guiding students on energy efficiency and EnergyPlus software, revising homework and reports.
-
-        %{\noindent\hspace{1cm}{\textbf{Lecturer:} Dr. Abbas Rajabi            Ghahnavieh}}\\\vspace{5pt}
-\end{itemize}
-
-
-%----------------------------------------------------------------------------------------
-%-----------Languages Skills-----------------
-%----------------------------------------------------------------------------------------
-\section{\textbf{Language Skills}}	    
-\vspace{5pt}
-
-\begin{itemize}[leftmargin=3ex]
-	\item   {{English:}} Fluent \textbar\ TOEFL iBT, Overall Score: 86 (prepared to retake the TOEFL test if required)\\ 
-	\hspace*{10pt}	R: 23, L: 21, S: 21, W: 21   \\
-    % \item  Persian: Native   
-\end{itemize}
-%----------------------------------------------------------------------------------------
-%-----------Certificates-----------------
-%----------------------------------------------------------------------------------------
-\section{\textbf{Certificates}}	    
-\vspace{5pt}
-    \begin{itemize}[noitemsep, topsep=6pt, after=\vspace{-5 mm}, leftmargin = 3ex]
-        \item \small Solar Cells and Simulation of Photovoltaic Power Plants- PVsyst \textbar\ Al-Zahra University, 2022 \vspace{5pt}
-        % \item \small \vspace{5pt}
-        \item \small Deep Learning with PyTorch \textbar\ DataCamp, 2024 (\href{https://www.datacamp.com/completed/statement-of-accomplishment/course/bec64719d3b233d79e6d4f19ef52cac67b1cc9b0}{\underline{certification}}) \vspace{5pt}
-        \item \small Databases and SQL for Data Science \textbar\ Coursera (IBM), 2021 (\href{https://www.credly.com/badges/1ef5cb81-602a-4ab3-9c9f-2ba5761041f5?source=linked_in_profile}{\underline{certification}})\vspace{5pt}
-        % \item \small \vspace{5pt}
-	    
-\end{itemize}
-\vspace{0pt}
-%----------------------------------------------------------------------------------------
-%-----------Honor And Awards-----------------
-%----------------------------------------------------------------------------------------
-\section{\textbf{Honors and Awards}}	    
-\vspace{5pt}
-
-\begin{itemize}[noitemsep, topsep=6pt, after=\vspace{-5 mm}, leftmargin = 3ex]
-	\item \small Best poster award in 9th International Conference on Technology and Energy Management; Feb 2024. \vspace{5pt}
-    \item \small Ranked 68th (top 1.7\%) among more than 4000 participants in the Iranian University Entrance Exam for master's degree. \vspace{5pt}
-    \item \small Ranked 17th (top 1.1\%) among more than 1500 participants in the Photonics Entrance Exam for master's degree. \vspace{5pt}
-    
-	
-\end{itemize}
-\vspace{0pt}
-
-% -------------------------------------------------
-% ---------------Courses-----------------------------
-% -------------------------------------------------
-
-% \section{\textbf{Selected Courses}}
-% \vspace{5pt}
-
-% \begin{minipage}[t]{0.45\textwidth}
-% \subsection*{\fontsize{9pt}{12pt}\selectfont Graduate}
-% \begin{itemize}[noitemsep, topsep=6pt, after=\vspace{-5 mm}, leftmargin = 3ex]
-%     \item  Reliability and Risk Analysis (19.8/20) 
-%     \item  Energy Management in Building (19/20)
-%     \item  Applied Optimization in Energy System (18.6/20)
-%     \item  Process Engineering (18.3/20) 
-%     \item  Energy Modeling (18.2/20) 
-% \end{itemize}
-% \end{minipage}%
-% \hfill
-% \begin{minipage}[t]{0.45\textwidth}
-% \subsection*{\fontsize{9pt}{12pt}\selectfont Undergraduate}
-% \begin{itemize}[noitemsep, topsep=6pt, after=\vspace{-5 mm}, leftmargin = 3ex]
-%     % \item  Astrophysics (19.25/20)
-%     % \item  Fundamental Particles (19.5/20)
-%     \item  Plasma (18/20)
-%     \item  Renewable Energy (16/20)
-%     \item  Mathematical Physics 1 and 2 (17.4 and 18/20)
-%     \item  Geophysics (18.75/20)
-%     \item  Thermodynamics and Statistical Mechanics (17.75/20) 
-% \end{itemize}
-% \end{minipage}
-%----------------------------------------------------------------------------------------
-%-----------References-----------------
-%----------------------------------------------------------------------------------------
-
-\section{References}	    
-\vspace{5pt}
-
-\begin{itemize}[leftmargin=3ex]
-	\item \textbf{Abbas Rajabi Ghahnavieh}\vspace{2pt}\\
-	Assistant Professor, Head of the Energy Group at the Sharif Energy, Water and Environment Institute (SEWEI)\\
-	Department of Energy Engineering, Sharif University of Technology\\
-	Email: Rajabi@sharif.edu\vspace{5pt}
-\end{itemize} 
-
-\begin{itemize}[leftmargin=3ex]
-	\item \textbf{Moein Moeini Aghtaie}\vspace{2pt}\\
-	Associate Professor, IEEE Senior Member\\
-	Department of Energy Engineering, Sharif University of Technology\\
-	Email: Moeini@sharif.edu\vspace{5pt}
-\end{itemize}
-
-\begin{itemize}[leftmargin=3ex]
-	\item \textbf{Amin Faraji Astaneh}\vspace{2pt}\\
-	Assistant Professor,\\
-	Department of Physics, Sharif University of Technology\\
-	Email: Faraji@sharif.edu\\
-\end{itemize}
 
 \vspace{5pt}
+
+
+\subsection*{\fontsize{10pt}{12pt}\selectfont Journal Publications}
+
+
+\begin{itemize}
+[
+noitemsep,
+topsep=5pt,
+leftmargin=3ex
+]
+
+
+\item
+\justifying
+S. H. Danook, H. A. Z. Al-bonsrulah, V. Raja, 
+\textbf{M. Kolivandi}, A. Aghadadashi, and M. Al-Bahrani,
+``Investigations of Performance Improvements on the Evacuated Tube Solar Collector with and Without the Incorporation of Preheater through Various Engineering Approaches,''
+\textit{IET Renewable Power Generation},
+vol. 17, no. 3, pp. 563--578, 2023.
+
+\vspace{5pt}
+
+
+\item
+\justifying
+M. K. Farahani,
+\textbf{M. Kolivandi},
+A. R. Ghahnavieh, and M. Talaei,
+``Enhancing Fault Detection in CO$_2$ Refrigeration Systems: Optimal Sensor Selection and Robustness Analysis Using Tree-Based Machine Learning,''
+arXiv preprint arXiv:2503.17694, 2025.
+
+
+\vspace{5pt}
+
+
+\item
+\justifying
+\textbf{M. Kolivandi},
+A. R. Ghahnavieh,
+``Enhancing Energy Internet Efficiency: Probabilistic Energy Routing and Reliability Assessment Using Graph Theory,''
+\textit{Manuscript in Preparation}.
+
+
+\end{itemize}
+
+
+
+\subsection*{\fontsize{10pt}{12pt}\selectfont Conference Publications}
+
+
+\begin{itemize}
+[
+noitemsep,
+topsep=5pt,
+leftmargin=3ex
+]
+
+
+\item
+\justifying
+\textbf{M. Kolivandi},
+M. K. Farahani, and A. R. Ghahnavieh,
+``Probabilistic Energy Routing Algorithm Enabling Reliability Assessment in Local Energy Internet,''
+\textit{9th International Conference on Technology and Energy Management (ICTEM)},
+2024.
+
+\vspace{5pt}
+
+
+\item
+\justifying
+M. K. Farahani,
+\textbf{M. Kolivandi},
+and A. R. Ghahnavieh,
+``Comparative Analysis of Energy Efficiency Evaluation Methods for Buildings: ISO 13790 vs. EnergyPlus Simulation,''
+\textit{9th International Conference on Technology and Energy Management (ICTEM)},
+2024.
+
+
+\vspace{5pt}
+
+
+\item
+\justifying
+\textbf{M. Kolivandi},
+A. R. Ghahnavieh,
+``Numerical and Analytical Approaches to Assessing the Reliability of Routing Algorithm in Energy Internet,''
+\textit{7th International Conference on Reliability and Safety Engineering (ICRSE)},
+2023.
+
+
+\end{itemize}
+
+
+
+
+
+%----------------------------------------------------------------------------------------
+% EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\section{\textbf{Experience and Research}}
+
+\vspace{5pt}
+
+
+\subsection*{\fontsize{10pt}{12pt}\selectfont Industry \& Applied Experience}
+
+
+
+\begin{itemize}
+[
+noitemsep,
+topsep=5pt,
+leftmargin=2ex
+]
+
+
+\item[]
+\textbf{
+Energy Systems Engineer \textbar\ Renewable Energy Monitoring Platform
+}
+\hfill
+\textbf{2025 -- Present}
+
+
+\vspace{4pt}
+
+
+Developing an intelligent monitoring and analytics platform for photovoltaic power plants by integrating SCADA telemetry, meteorological measurements, machine learning models, and time-series data engineering.
+
+
+
+\begin{itemize}
+[
+noitemsep,
+leftmargin=4ex
+]
+
+
+\item
+Designed a scalable backend architecture using Python, FastAPI, PostgreSQL, and TimescaleDB for real-time renewable energy monitoring.
+
+\item
+Developed telemetry ingestion and processing pipelines for high-frequency SCADA measurements from PV plants.
+
+\item
+Implemented KPI calculation engines for photovoltaic performance assessment, including:
+Performance Ratio (PR), Specific Yield, Reference Yield, availability indicators, and degradation analysis.
+
+\item
+Developed machine learning forecasting pipelines for photovoltaic power generation using historical operational and meteorological data.
+
+\item
+Implemented anomaly detection workflows for identifying abnormal inverter behavior, sensor failures, and performance degradation.
+
+\item
+Designed time-series aggregation strategies using TimescaleDB continuous aggregates for efficient historical analytics.
+
+\end{itemize}
+
+
+
+\vspace{10pt}
+
+
+
+\item[]
+\textbf{
+R\&D Engineer \textbar\ Sharif University of Technology
+}
+\hfill
+\textbf{2023}
+
+
+\vspace{4pt}
+
+
+Developed a machine learning-based fault detection and diagnosis framework for CO$_2$ refrigeration systems.
+
+
+
+\begin{itemize}
+[
+noitemsep,
+leftmargin=4ex
+]
+
+
+\item
+Designed tree-based machine learning models for fault classification and diagnosis.
+
+\item
+Optimized sensor selection strategies to reduce monitoring requirements while maintaining diagnostic accuracy.
+
+\item
+Achieved approximately 99\% F1-score using Random Forest and XGBoost-based models.
+
+\item
+Evaluated model robustness under measurement noise and sensor failure scenarios.
+
+
+\end{itemize}
+
+
+
+\vspace{10pt}
+
+
+
+\item[]
+\textbf{
+Energy Optimization Research Projects \textbar\ Net-Zero Energy Buildings
+}
+\hfill
+\textbf{2021 -- 2023}
+
+
+\vspace{4pt}
+
+
+Applied mathematical optimization methods for energy-efficient building design and operation.
+
+
+
+\begin{itemize}
+[
+noitemsep,
+leftmargin=4ex
+]
+
+\item
+Developed multi-objective optimization models using Mixed Integer Linear Programming (MILP).
+
+\item
+Analyzed renewable energy integration, building energy efficiency, and operational strategies.
+
+\item
+Used EnergyPlus and DesignBuilder simulations for performance evaluation.
+
+\end{itemize}
+
+
+
+\end{itemize}
+
+
+
+
+
+
+%----------------------------------------------------------------------------------------
+% ACADEMIC RESEARCH
+%----------------------------------------------------------------------------------------
+
+
+\subsection*{\fontsize{10pt}{12pt}\selectfont Academic \& Computational Research}
+
+
+
+\begin{itemize}
+[
+noitemsep,
+topsep=5pt,
+leftmargin=2ex
+]
+
+
+
+\item[]
+\textbf{
+Energy Internet Reliability and Routing Optimization
+}
+
+
+\vspace{4pt}
+
+
+Developed a probabilistic routing framework for resilient operation of distributed energy networks.
+
+
+
+\begin{itemize}
+[
+noitemsep,
+leftmargin=4ex
+]
+
+
+\item
+Modeled Energy Internet as a graph-based network consisting of distributed generators, storage systems, and loads.
+
+\item
+Developed reliability evaluation methods considering stochastic load variations and component failures.
+
+\item
+Implemented Monte Carlo simulation approaches for uncertainty propagation.
+
+\item
+Investigated reliability enhancement through optimized energy routing strategies.
+
+
+\end{itemize}
+
+
+
+\vspace{10pt}
+
+
+
+\item[]
+\textbf{
+AI-based Renewable Energy Forecasting and Analytics
+}
+
+
+
+\vspace{4pt}
+
+
+Developing machine learning models for renewable generation forecasting and operational optimization.
+
+
+
+\begin{itemize}
+[
+noitemsep,
+leftmargin=4ex
+]
+
+
+\item
+Implemented time-series forecasting models using historical PV generation and weather data.
+
+\item
+Engineered temporal and physical features including solar radiation, temperature, wind speed, and historical power profiles.
+
+\item
+Evaluated forecasting performance using machine learning and deep learning approaches.
+
+
+\end{itemize}
+
+
+
+\vspace{10pt}
+
+
+
+\item[]
+\textbf{
+Stochastic Optimization in Multi-Energy Systems
+}
+
+
+
+\vspace{4pt}
+
+
+Developed optimization frameworks for integrated energy systems considering uncertainty and storage degradation.
+
+
+
+\begin{itemize}
+[
+noitemsep,
+leftmargin=4ex
+]
+
+
+\item
+Applied stochastic programming and scenario generation techniques for uncertain energy environments.
+
+\item
+Implemented Monte Carlo simulation with scenario reduction methods.
+
+\item
+Optimized energy storage scheduling and multi-carrier energy hub operation.
+
+
+\end{itemize}
+
+
+
+\end{itemize}
+
+%----------------------------------------------------------------------------------------
+% SELECTED PROJECTS
+%----------------------------------------------------------------------------------------
+
+\section{\textbf{Selected Projects}}
+
+\vspace{5pt}
+
+
+\begin{itemize}
+[
+noitemsep,
+topsep=5pt,
+leftmargin=2ex
+]
+
+
+\item[]
+\textbf{
+Real-Time Photovoltaic Monitoring and Analytics Platform
+}
+\hfill
+\textbf{2025 -- Present}
+
+
+\vspace{3pt}
+
+
+Designed and developed an end-to-end renewable energy monitoring platform for photovoltaic power plants, integrating industrial telemetry, data engineering, and artificial intelligence.
+
+
+
+\begin{itemize}
+[
+noitemsep,
+leftmargin=4ex
+]
+
+
+\item
+Designed a layered software architecture based on Clean Architecture and Domain-Driven Design principles.
+
+\item
+Developed backend services using Python and FastAPI for real-time monitoring and analytics.
+
+\item
+Implemented PostgreSQL and TimescaleDB-based data storage architecture for high-frequency SCADA measurements.
+
+\item
+Developed telemetry ingestion, aggregation, and processing pipelines for inverter, weather station, and plant-level data.
+
+\item
+Implemented renewable energy KPIs including:
+Performance Ratio (PR), Yield Factor, Specific Yield, Reference Yield, availability, and degradation indicators.
+
+\item
+Developed machine learning pipelines for PV power forecasting and anomaly detection.
+
+\end{itemize}
+
+
+
+\vspace{10pt}
+
+
+
+\item[]
+\textbf{
+AI-Based PV Power Forecasting Framework
+}
+
+
+
+\vspace{3pt}
+
+
+Developed data-driven forecasting models for short-term photovoltaic generation prediction.
+
+
+
+\begin{itemize}
+[
+noitemsep,
+leftmargin=4ex
+]
+
+
+\item
+Processed historical SCADA and meteorological time-series data.
+
+\item
+Engineered temporal features including hour, day, seasonality, lagged power values, solar irradiance, and environmental parameters.
+
+\item
+Implemented machine learning models using Python-based frameworks.
+
+\item
+Evaluated forecasting performance using statistical error metrics.
+
+\end{itemize}
+
+
+
+\vspace{10pt}
+
+
+
+\item[]
+\textbf{
+IEEE 123-Bus Energy Internet Simulation Framework
+}
+
+
+
+\vspace{3pt}
+
+
+Developed a computational framework for evaluating distributed energy resource coordination and intelligent routing strategies.
+
+
+
+\begin{itemize}
+[
+noitemsep,
+leftmargin=4ex
+]
+
+
+\item
+Modeled distribution-level Energy Internet networks using IEEE test systems.
+
+\item
+Implemented clustering approaches for identifying energy zones using:
+K-Means, Spectral Clustering, Hierarchical Clustering, Gaussian Mixture Models, and Louvain algorithm.
+
+\item
+Investigated reinforcement learning, supervised learning, and hybrid optimization approaches for energy routing.
+
+\item
+Integrated storage scheduling and renewable generation uncertainty modeling.
+
+\end{itemize}
+
+
+
+\vspace{10pt}
+
+
+
+\item[]
+\textbf{
+Renewable Energy and Building Simulation Projects
+}
+
+
+
+\vspace{3pt}
+
+
+Performed computational studies on renewable integration and energy-efficient building systems.
+
+
+
+\begin{itemize}
+[
+noitemsep,
+leftmargin=4ex
+]
+
+
+\item
+Developed building energy models using EnergyPlus and DesignBuilder.
+
+\item
+Evaluated photovoltaic system performance using PVsyst and PVLib.
+
+\item
+Analyzed renewable integration scenarios under different climate conditions.
+
+\end{itemize}
+
+
+
+\end{itemize}
+
+
+
+
+
+
+
+%----------------------------------------------------------------------------------------
+% SKILLS
+%----------------------------------------------------------------------------------------
+
+\section{\textbf{Skills and Expertise}}
+
+\vspace{5pt}
+
+
+\begin{itemize}
+[
+noitemsep,
+topsep=5pt,
+leftmargin=3ex
+]
+
+
+\item
+\textbf{Programming Languages:}
+Python, MATLAB, R, Fortran
+
+
+\vspace{4pt}
+
+
+\item
+\textbf{Machine Learning and Data Science:}
+PyTorch, TensorFlow, Scikit-learn, Pandas, NumPy, statistical learning, deep learning, time-series forecasting, anomaly detection
+
+
+
+\vspace{4pt}
+
+
+\item
+\textbf{Optimization and Mathematical Modeling:}
+Pyomo, GAMS, stochastic optimization, robust optimization, Mixed Integer Linear Programming (MILP), nonlinear programming, dynamic programming, evolutionary algorithms
+
+
+
+\vspace{4pt}
+
+
+\item
+\textbf{Energy System Modeling Tools:}
+PVLib, PVsyst, EnergyPlus, DesignBuilder, EES, Pandapower, DIgSILENT
+
+
+
+\vspace{4pt}
+
+
+\item
+\textbf{Backend and Data Engineering:}
+FastAPI, PostgreSQL, TimescaleDB, SQL, Kafka, RabbitMQ, REST API development, data pipelines, time-series databases
+
+
+
+\vspace{4pt}
+
+
+\item
+\textbf{Software Engineering:}
+Clean Architecture, Domain-Driven Design (DDD), Git, Docker, Linux, software documentation
+
+
+
+\vspace{4pt}
+
+
+\item
+\textbf{Energy Systems Expertise:}
+Renewable energy systems, photovoltaic systems, smart grids, Energy Internet, microgrids, energy storage systems, reliability analysis, predictive maintenance
+
+
+
+\vspace{4pt}
+
+
+\item
+\textbf{Standards and Methodologies:}
+ASHRAE 90.1, ISO 13790, LEED, BREEAM
+
+
+\end{itemize}
+
+
+
+
+
+
+%----------------------------------------------------------------------------------------
+% TEACHING EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\section{\textbf{Teaching Experience}}
+
+\vspace{5pt}
+
+
+
+\begin{itemize}
+[
+noitemsep,
+topsep=5pt,
+leftmargin=0ex
+]
+
+
+\item[]
+\textbf{
+Teaching Assistant -- Reliability and Risk Analysis
+}
+\hfill
+Spring 2023
+
+
+\begin{itemize}
+[
+noitemsep,
+leftmargin=4ex
+]
+
+\item
+Department of Energy Engineering, Sharif University of Technology.
+
+\item
+Conducted tutorial sessions, assisted course delivery, and evaluated assignments, exams, and student projects.
+
+\end{itemize}
+
+
+
+\vspace{8pt}
+
+
+
+\item[]
+\textbf{
+Teaching Assistant -- Process Engineering
+}
+\hfill
+Fall 2022
+
+
+\begin{itemize}
+[
+noitemsep,
+leftmargin=4ex
+]
+
+\item
+Department of Energy Engineering, Sharif University of Technology.
+
+\item
+Supported instruction of mass balance, thermodynamics, and engineering analysis.
+
+\item
+Reviewed homework assignments and supervised group projects.
+
+\end{itemize}
+
+
+
+\vspace{8pt}
+
+
+
+\item[]
+\textbf{
+Teaching Assistant -- Energy Management in Buildings
+}
+\hfill
+Fall 2022
+
+
+\begin{itemize}
+[
+noitemsep,
+leftmargin=4ex
+]
+
+\item
+Prepared weekly tutorials on energy efficiency and building simulation.
+
+\item
+Assisted students in EnergyPlus modeling and energy analysis projects.
+
+\end{itemize}
+
+
+
+\end{itemize}
+
+%----------------------------------------------------------------------------------------
+% HONORS AND AWARDS
+%----------------------------------------------------------------------------------------
+
+\section{\textbf{Honors and Awards}}
+
+\vspace{5pt}
+
+
+\begin{itemize}
+[
+noitemsep,
+topsep=5pt,
+leftmargin=3ex
+]
+
+
+\item
+Full scholarship recipient for M.Sc. studies at Sharif University of Technology based on outstanding performance in the national graduate entrance examination.
+
+
+\vspace{4pt}
+
+
+\item
+Ranked among the top 1\% of candidates in the Iranian National University Entrance Examination for Master's Degree.
+
+
+\vspace{4pt}
+
+
+\item
+Best Presentation Award,
+9th International Conference on Technology and Energy Management (ICTEM), 2024.
+
+
+\vspace{4pt}
+
+
+\item
+Best Poster Award,
+9th International Conference on Technology and Energy Management (ICTEM), 2024.
+
+
+\vspace{4pt}
+
+
+\item
+Awarded for outstanding academic performance during graduate studies at Sharif University of Technology.
+
+
+\end{itemize}
+
+
+
+
+
+%----------------------------------------------------------------------------------------
+% CERTIFICATIONS
+%----------------------------------------------------------------------------------------
+
+\section{\textbf{Certifications}}
+
+\vspace{5pt}
+
+
+\begin{itemize}
+[
+noitemsep,
+topsep=5pt,
+leftmargin=3ex
+]
+
+
+\item
+Deep Learning with PyTorch
+\hfill
+DataCamp, 2024
+
+
+\vspace{4pt}
+
+
+\item
+Databases and SQL for Data Science
+\hfill
+IBM -- Coursera, 2021
+
+
+\vspace{4pt}
+
+
+\item
+Solar Cells and Simulation of Photovoltaic Power Plants -- PVsyst
+\hfill
+Al-Zahra University, 2022
+
+
+\end{itemize}
+
+
+
+
+
+
+%----------------------------------------------------------------------------------------
+% SELECTED COURSES
+%----------------------------------------------------------------------------------------
+
+\section{\textbf{Selected Graduate Courses}}
+
+\vspace{5pt}
+
+
+\begin{multicols}{2}
+
+
+\begin{itemize}
+[
+noitemsep,
+topsep=3pt,
+leftmargin=2ex
+]
+
+
+\item Reliability and Risk Analysis
+
+\item Applied Optimization in Energy Systems
+
+\item Energy Management in Buildings
+
+\item Energy Modeling
+
+\item Process Engineering
+
+\item Renewable Energy Systems
+
+\item Smart Grid Technologies
+
+\item Energy Economics
+
+
+\end{itemize}
+
+
+
+\end{multicols}
+
+
+
+
+
+
+
+%----------------------------------------------------------------------------------------
+% LANGUAGE SKILLS
+%----------------------------------------------------------------------------------------
+
+\section{\textbf{Language Skills}}
+
+\vspace{5pt}
+
+
+\begin{itemize}
+[
+noitemsep,
+leftmargin=3ex
+]
+
+
+\item
+\textbf{English:}
+Professional Working Proficiency
+
+
+\begin{itemize}
+[
+noitemsep,
+leftmargin=4ex
+]
+
+\item TOEFL iBT: Overall Score 86
+
+\item Reading: 23
+
+\item Listening: 21
+
+\item Speaking: 21
+
+\item Writing: 21
+
+\end{itemize}
+
+
+\end{itemize}
+
+
+
+
+
+
+%----------------------------------------------------------------------------------------
+% REFERENCES
+%----------------------------------------------------------------------------------------
+
+\section{\textbf{References}}
+
+\vspace{5pt}
+
+
+
+\begin{itemize}
+[
+leftmargin=3ex
+]
+
+
+\item
+\textbf{Dr. Abbas Rajabi Ghahnavieh}
+
+\vspace{2pt}
+
+Assistant Professor\\
+Department of Energy Engineering\\
+Sharif University of Technology\\
+
+Supervisor of Master's Thesis\\
+
+Email:
+Rajabi@sharif.edu
+
+
+\vspace{10pt}
+
+
+
+\item
+\textbf{Dr. Moein Moeini Aghtaie}
+
+\vspace{2pt}
+
+Associate Professor\\
+Department of Energy Engineering\\
+Sharif University of Technology\\
+
+Email:
+Moeini@sharif.edu
+
+
+
+\vspace{10pt}
+
+
+
+\item
+\textbf{Dr. Amin Faraji Astaneh}
+
+\vspace{2pt}
+
+Assistant Professor\\
+Department of Physics\\
+Sharif University of Technology\\
+
+Bachelor Thesis Advisor\\
+
+Email:
+Faraji@sharif.edu
+
+
+
+\end{itemize}
+
+
 
 \end{document}
